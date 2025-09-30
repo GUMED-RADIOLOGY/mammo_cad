@@ -85,7 +85,7 @@ Typical git flow:
 git checkout -b feature/my-change
 git add .
 git commit -m "feat: something useful"
-git push -u origin HEAD
+git push -u origin main
 gh pr create --fill --web
 ```
 ---
