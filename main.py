@@ -1,13 +1,12 @@
 # print_dicom_header.py
-# Requires: pip install pydicom
 
 from pydicom import dcmread
 from pydicom.errors import InvalidDicomError
 from pathlib import Path
 import sys
 
-# >>> Put your DICOM file path here <<<
-DICOM_FILE = Path(r"/data/UC6/ECI_GUM_S0001/exp_ECI_GUM_S0001_20190122/scans/2-SINGLE_IMAGES__Mammografia_Diagnostyka__Diagnosis/resources/DICOM/files/1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002.dcm")
+# Input DICOM file (change if needed)
+DICOM_FILE = Path(r"/data/UC6/ECI_GUM_S0001/exp_ECI_GUM_S0001_20190122/scans/2-SINGLE_IMAGES__Mammografia_Diagnostyka__Diagnosis/resources/annotations/files/event_4d4ea55c-6da8-4d59-a3b3-8c3bcefbc092/segmentation.dcm")
 
 def main():
     if not DICOM_FILE.exists():
@@ -15,15 +14,18 @@ def main():
         sys.exit(1)
 
     try:
-        ds = dcmread(DICOM_FILE, force=False)  # set force=True if your file lacks preamble
+        ds = dcmread(DICOM_FILE, force=False)  # set force=True if needed
     except InvalidDicomError as e:
         sys.stderr.write(f"Error: not a valid DICOM file: {DICOM_FILE}\nDetails: {e}\n")
         sys.exit(2)
 
-    # Pretty print the DICOM header (data elements)
-    print(f"--- DICOM Header: {DICOM_FILE} ---")
-    print(ds)
-    print("\n--- Full elements ---")
+    # Save header to a text file in the current folder
+    output_file = Path.cwd() / "dicom_header.txt"
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(f"--- DICOM Header: {DICOM_FILE.name} ---\n")
+        f.write(str(ds))  # writes the dataset header only
+
+    print(f"DICOM header saved to {output_file}")
 
 if __name__ == "__main__":
     main()

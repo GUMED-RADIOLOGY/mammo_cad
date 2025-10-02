@@ -1,0 +1,1026 @@
+--- DICOM Header: segmentation.dcm ---
+Dataset.file_meta -------------------------------
+(0002,0000) File Meta Information Group Length  UL: 210
+(0002,0001) File Meta Information Version       OB: b'\x00\x01'
+(0002,0002) Media Storage SOP Class UID         UI: RT Structure Set Storage
+(0002,0003) Media Storage SOP Instance UID      UI: 1.3.6.1.4.1.44316.2.820.3.20230722222535.1.216160248087603354786
+(0002,0010) Transfer Syntax UID                 UI: Implicit VR Little Endian
+(0002,0012) Implementation Class UID            UI: 1.2.276.0.7230010.3.0.3.6.7
+(0002,0013) Implementation Version Name         SH: 'OFFIS_DCMTK_367'
+-------------------------------------------------
+(0008,0000) Group Length                        UL: 336
+(0008,0005) Specific Character Set              CS: 'ISO_IR 100'
+(0008,0016) SOP Class UID                       UI: RT Structure Set Storage
+(0008,0018) SOP Instance UID                    UI: 1.3.6.1.4.1.44316.2.820.3.20230722222535.1.216160248087603354786
+(0008,0020) Study Date                          DA: '20190122'
+(0008,0021) Series Date                         DA: '20230722'
+(0008,0030) Study Time                          TM: ''
+(0008,0031) Series Time                         TM: '222535'
+(0008,0050) Accession Number                    SH: ''
+(0008,0060) Modality                            CS: 'RTSTRUCT'
+(0008,0070) Manufacturer                        LO: 'Softneta'
+(0008,0090) Referring Physician's Name          PN: ''
+(0008,0201) Timezone Offset From UTC            SH: '+0200'
+(0008,1030) Study Description                   LO: 'Mammografia Diagnostyka'
+(0008,103E) Series Description                  LO: 'Series of 3D annotations instances, 20230723T002539'
+(0010,0000) Group Length                        UL: 112
+(0010,0010) Patient's Name                      PN: 'Female 053Y MG'
+(0010,0020) Patient ID                          LO: '6eb9527ee41dcc8a55702b892d3ceca9086c219e60f34547da5e3fa54ee1de41'
+(0010,0030) Patient's Birth Date                DA: ''
+(0010,0040) Patient's Sex                       CS: 'F'
+(0020,0000) Group Length                        UL: 218
+(0020,000D) Study Instance UID                  UI: 1.2.276.0.7230010.3.1.2.3059715276.5112.1678755402.13000
+(0020,000E) Series Instance UID                 UI: 1.3.6.1.4.1.44316.2.810.2.20230621090506.1.722912299273605121301
+(0020,0010) Study ID                            SH: 'f16c76f6429f4166277bbfaa464146de4e823cacd2586e9fab85c085e1127e58'
+(0020,0011) Series Number                       IS: '-2'
+(3006,0000) Group Length                        UL: 65294
+(3006,0002) Structure Set Label                 SH: 'Segmentation regions'
+(3006,0008) Structure Set Date                  DA: '20230723'
+(3006,0009) Structure Set Time                  TM: '002539'
+(3006,0010)  Referenced Frame of Reference Sequence  1 item(s) ---- 
+   (0020,0000) Group Length                        UL: 10
+   (0020,0052) Frame of Reference UID              UI: 1
+   (3006,0000) Group Length                        UL: 728
+   (3006,0012)  RT Referenced Study Sequence  1 item(s) ---- 
+      (0008,0000) Group Length                        UL: 96
+      (0008,1150) Referenced SOP Class UID            UI: Detached Study Management SOP Class
+      (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.2.3059715276.5112.1678755402.13000
+      (3006,0000) Group Length                        UL: 592
+      (3006,0014)  RT Referenced Series Sequence  1 item(s) ---- 
+         (0020,0000) Group Length                        UL: 64
+         (0020,000E) Series Instance UID                 UI: 1.2.276.0.7230010.3.1.3.3059715276.5112.1678755402.13001
+         (3006,0000) Group Length                        UL: 488
+         (3006,0016)  Contour Image Sequence  4 item(s) ---- 
+            (0008,0000) Group Length                        UL: 100
+            (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+            (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13008
+            ---------
+            (0008,0000) Group Length                        UL: 100
+            (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+            (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13006
+            ---------
+            (0008,0000) Group Length                        UL: 100
+            (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+            (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13004
+            ---------
+            (0008,0000) Group Length                        UL: 100
+            (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+            (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+            ---------
+         ---------
+      ---------
+   ---------
+(3006,0020)  Structure Set ROI Sequence  2 item(s) ---- 
+   (3006,0000) Group Length                        UL: 126
+   (3006,0022) ROI Number                          IS: '1'
+   (3006,0024) Referenced Frame of Reference UID   UI: 1
+   (3006,0026) ROI Name                            LO: 'L1'
+   (3006,0028) ROI Description                     ST: 'smart-paint;5;8f22a2bf-af99-4934-b3c9-3c5bf112ce4a;;;'
+   (3006,0036) ROI Generation Algorithm            CS: 'MANUAL'
+   (3006,0038) ROI Generation Description          LO: 'Smart paint'
+   ---------
+   (3006,0000) Group Length                        UL: 150
+   (3006,0022) ROI Number                          IS: '2'
+   (3006,0024) Referenced Frame of Reference UID   UI: 1
+   (3006,0026) ROI Name                            LO: 'Smart Paint 3'
+   (3006,0028) ROI Description                     ST: 'smart-paint;5;b1e2acf4-258d-463d-ba48-f6747fc9330d;;DELETED=true;'
+   (3006,0036) ROI Generation Algorithm            CS: 'MANUAL'
+   (3006,0038) ROI Generation Description          LO: 'Smart paint'
+   ---------
+(3006,0039)  ROI Contour Sequence  2 item(s) ---- 
+   (3006,0000) Group Length                        UL: 63930
+   (3006,002A) ROI Display Color                   IS: [93, 105, 177]
+   (3006,0040)  Contour Sequence  83 item(s) ---- 
+      (3006,0000) Group Length                        UL: 318
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '1'
+      (3006,0050) Contour Data                        DS: [19.082500000000003, 99.5775, 0, 18.997500000000002, 99.5775, 0, 18.997500000000002, 99.66250000000001, 0, 19.082500000000003, 99.66250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 410
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '8'
+      (3006,0048) Contour Number                      IS: '2'
+      (3006,0050) Contour Data                        DS: Array of 24 elements
+      ---------
+      (3006,0000) Group Length                        UL: 274
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '3'
+      (3006,0050) Contour Data                        DS: [19.2525, 99.3225, 0, 19.1675, 99.3225, 0, 19.1675, 99.40750000000001, 0, 19.2525, 99.40750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '4'
+      (3006,0050) Contour Data                        DS: [19.2525, 99.40750000000001, 0, 19.2525, 99.4925, 0, 19.337500000000002, 99.4925, 0, 19.337500000000002, 99.40750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '5'
+      (3006,0050) Contour Data                        DS: [19.8475, 98.47250000000001, 0, 19.762500000000003, 98.47250000000001, 0, 19.762500000000003, 98.3875, 0, 19.8475, 98.3875, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 316
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '6'
+      (3006,0050) Contour Data                        DS: [19.5925, 96.00750000000001, 0, 19.5925, 95.92250000000001, 0, 19.677500000000002, 95.92250000000001, 0, 19.677500000000002, 96.00750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 408
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '8'
+      (3006,0048) Contour Number                      IS: '7'
+      (3006,0050) Contour Data                        DS: Array of 24 elements
+      ---------
+      (3006,0000) Group Length                        UL: 478
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '10'
+      (3006,0048) Contour Number                      IS: '8'
+      (3006,0050) Contour Data                        DS: Array of 30 elements
+      ---------
+      (3006,0000) Group Length                        UL: 274
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '9'
+      (3006,0050) Contour Data                        DS: [23.1625, 94.81750000000001, 0, 23.0775, 94.81750000000001, 0, 23.0775, 94.7325, 0, 23.1625, 94.7325, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '10'
+      (3006,0050) Contour Data                        DS: [24.692500000000003, 93.5425, 0, 24.6075, 93.5425, 0, 24.6075, 93.62750000000001, 0, 24.692500000000003, 93.62750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 318
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '11'
+      (3006,0050) Contour Data                        DS: [29.282500000000002, 98.7275, 0, 29.282500000000002, 98.64250000000001, 0, 29.367500000000003, 98.64250000000001, 0, 29.367500000000003, 98.7275, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '12'
+      (3006,0050) Contour Data                        DS: [30.2175, 98.7275, 0, 30.2175, 98.64250000000001, 0, 30.302500000000002, 98.64250000000001, 0, 30.302500000000002, 98.7275, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '13'
+      (3006,0050) Contour Data                        DS: [30.302500000000002, 99.3225, 0, 30.2175, 99.3225, 0, 30.2175, 99.23750000000001, 0, 30.302500000000002, 99.23750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 524
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '12'
+      (3006,0048) Contour Number                      IS: '14'
+      (3006,0050) Contour Data                        DS: Array of 36 elements
+      ---------
+      (3006,0000) Group Length                        UL: 318
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '15'
+      (3006,0050) Contour Data                        DS: [29.962500000000002, 99.83250000000001, 0, 29.962500000000002, 99.9175, 0, 30.047500000000003, 99.9175, 0, 30.047500000000003, 99.83250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 318
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '16'
+      (3006,0050) Contour Data                        DS: [30.047500000000003, 99.66250000000001, 0, 30.047500000000003, 99.5775, 0, 30.132500000000004, 99.5775, 0, 30.132500000000004, 99.66250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 376
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '17'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '18'
+      (3006,0050) Contour Data                        DS: [30.2175, 102.0425, 0, 30.132500000000004, 102.0425, 0, 30.132500000000004, 101.95750000000001, 0, 30.2175, 101.95750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '19'
+      (3006,0050) Contour Data                        DS: [20.782500000000002, 108.75750000000001, 0, 20.6975, 108.75750000000001, 0, 20.6975, 108.8425, 0, 20.782500000000002, 108.8425, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 33560
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '1156'
+      (3006,0048) Contour Number                      IS: '20'
+      (3006,0050) Contour Data                        DS: Array of 3468 elements
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '21'
+      (3006,0050) Contour Data                        DS: [18.8275, 106.7175, 0, 18.7425, 106.7175, 0, 18.7425, 106.63250000000001, 0, 18.8275, 106.63250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 326
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '22'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '23'
+      (3006,0050) Contour Data                        DS: [18.657500000000002, 107.39750000000001, 0, 18.657500000000002, 107.4825, 0, 18.7425, 107.4825, 0, 18.7425, 107.39750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 322
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '24'
+      (3006,0050) Contour Data                        DS: [29.962500000000002, 100.25750000000001, 0, 29.962500000000002, 100.3425, 0, 30.047500000000003, 100.3425, 0, 30.047500000000003, 100.25750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 622
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '12'
+      (3006,0048) Contour Number                      IS: '25'
+      (3006,0050) Contour Data                        DS: Array of 36 elements
+      ---------
+      (3006,0000) Group Length                        UL: 342
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '26'
+      (3006,0050) Contour Data                        DS: [30.047500000000003, 100.25750000000001, 0, 30.047500000000003, 100.17250000000001, 0, 30.132500000000004, 100.17250000000001, 0, 30.132500000000004, 100.25750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 668
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '14'
+      (3006,0048) Contour Number                      IS: '27'
+      (3006,0050) Contour Data                        DS: Array of 42 elements
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '28'
+      (3006,0050) Contour Data                        DS: [30.132500000000004, 99.66250000000001, 0, 30.132500000000004, 99.7475, 0, 30.2175, 99.7475, 0, 30.2175, 99.66250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '29'
+      (3006,0050) Contour Data                        DS: [29.367500000000003, 98.47250000000001, 0, 29.367500000000003, 98.5575, 0, 29.4525, 98.5575, 0, 29.4525, 98.47250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 274
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '30'
+      (3006,0050) Contour Data                        DS: [19.5925, 96.0925, 0, 19.5075, 96.0925, 0, 19.5075, 96.00750000000001, 0, 19.5925, 96.00750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 274
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '31'
+      (3006,0050) Contour Data                        DS: [19.5925, 96.77250000000001, 0, 19.5075, 96.77250000000001, 0, 19.5075, 96.6875, 0, 19.5925, 96.6875, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 468
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '10'
+      (3006,0048) Contour Number                      IS: '32'
+      (3006,0050) Contour Data                        DS: Array of 30 elements
+      ---------
+      (3006,0000) Group Length                        UL: 570
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '14'
+      (3006,0048) Contour Number                      IS: '33'
+      (3006,0050) Contour Data                        DS: Array of 42 elements
+      ---------
+      (3006,0000) Group Length                        UL: 318
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '34'
+      (3006,0050) Contour Data                        DS: [20.017500000000002, 98.3875, 0, 20.017500000000002, 98.30250000000001, 0, 20.102500000000003, 98.30250000000001, 0, 20.102500000000003, 98.3875, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 396
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '35'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '36'
+      (3006,0050) Contour Data                        DS: [20.102500000000003, 98.30250000000001, 0, 20.102500000000003, 98.3875, 0, 20.1875, 98.3875, 0, 20.1875, 98.30250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '37'
+      (3006,0050) Contour Data                        DS: [19.1675, 101.2775, 0, 19.082500000000003, 101.2775, 0, 19.082500000000003, 101.19250000000001, 0, 19.1675, 101.19250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 348
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '38'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '39'
+      (3006,0050) Contour Data                        DS: [19.2525, 101.2775, 0, 19.1675, 101.2775, 0, 19.1675, 101.36250000000001, 0, 19.2525, 101.36250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '40'
+      (3006,0050) Contour Data                        DS: [19.422500000000003, 101.2775, 0, 19.422500000000003, 101.19250000000001, 0, 19.5075, 101.19250000000001, 0, 19.5075, 101.2775, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 368
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '41'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '42'
+      (3006,0050) Contour Data                        DS: [18.4875, 103.91250000000001, 0, 18.4025, 103.91250000000001, 0, 18.4025, 103.8275, 0, 18.4875, 103.8275, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 396
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '8'
+      (3006,0048) Contour Number                      IS: '43'
+      (3006,0050) Contour Data                        DS: Array of 24 elements
+      ---------
+      (3006,0000) Group Length                        UL: 694
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '16'
+      (3006,0048) Contour Number                      IS: '44'
+      (3006,0050) Contour Data                        DS: Array of 48 elements
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '45'
+      (3006,0050) Contour Data                        DS: [18.9125, 104.42250000000001, 0, 18.9125, 104.3375, 0, 18.997500000000002, 104.3375, 0, 18.997500000000002, 104.42250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 356
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '46'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '47'
+      (3006,0050) Contour Data                        DS: [18.9125, 104.5925, 0, 18.9125, 104.67750000000001, 0, 18.997500000000002, 104.67750000000001, 0, 18.997500000000002, 104.5925, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 402
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '48'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '49'
+      (3006,0050) Contour Data                        DS: [19.1675, 104.5925, 0, 19.1675, 104.50750000000001, 0, 19.2525, 104.50750000000001, 0, 19.2525, 104.5925, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '50'
+      (3006,0050) Contour Data                        DS: [19.082500000000003, 104.67750000000001, 0, 19.082500000000003, 104.5925, 0, 19.1675, 104.5925, 0, 19.1675, 104.67750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '51'
+      (3006,0050) Contour Data                        DS: [18.1475, 105.18750000000001, 0, 18.1475, 105.1025, 0, 18.2325, 105.1025, 0, 18.2325, 105.18750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '52'
+      (3006,0050) Contour Data                        DS: [18.1475, 107.4825, 0, 18.1475, 107.39750000000001, 0, 18.2325, 107.39750000000001, 0, 18.2325, 107.4825, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '53'
+      (3006,0050) Contour Data                        DS: [18.2325, 103.65750000000001, 0, 18.2325, 103.5725, 0, 18.317500000000003, 103.5725, 0, 18.317500000000003, 103.65750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '54'
+      (3006,0050) Contour Data                        DS: [18.2325, 107.31250000000001, 0, 18.2325, 107.2275, 0, 18.317500000000003, 107.2275, 0, 18.317500000000003, 107.31250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 280
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '55'
+      (3006,0050) Contour Data                        DS: [18.317500000000003, 101.7025, 0, 18.317500000000003, 101.6175, 0, 18.4025, 101.6175, 0, 18.4025, 101.7025, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '56'
+      (3006,0050) Contour Data                        DS: [18.4025, 107.90750000000001, 0, 18.4025, 107.8225, 0, 18.4875, 107.8225, 0, 18.4875, 107.90750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '57'
+      (3006,0050) Contour Data                        DS: [18.5725, 102.8075, 0, 18.5725, 102.72250000000001, 0, 18.657500000000002, 102.72250000000001, 0, 18.657500000000002, 102.8075, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '58'
+      (3006,0050) Contour Data                        DS: [18.5725, 103.65750000000001, 0, 18.5725, 103.5725, 0, 18.657500000000002, 103.5725, 0, 18.657500000000002, 103.65750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '59'
+      (3006,0050) Contour Data                        DS: [18.657500000000002, 106.20750000000001, 0, 18.657500000000002, 106.1225, 0, 18.7425, 106.1225, 0, 18.7425, 106.20750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '60'
+      (3006,0050) Contour Data                        DS: [18.657500000000002, 108.2475, 0, 18.657500000000002, 108.16250000000001, 0, 18.7425, 108.16250000000001, 0, 18.7425, 108.2475, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 258
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '61'
+      (3006,0050) Contour Data                        DS: [18.8275, 103.8275, 0, 18.8275, 103.7425, 0, 18.9125, 103.7425, 0, 18.9125, 103.8275, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '62'
+      (3006,0050) Contour Data                        DS: [18.7425, 103.91250000000001, 0, 18.7425, 103.8275, 0, 18.8275, 103.8275, 0, 18.8275, 103.91250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '63'
+      (3006,0050) Contour Data                        DS: [18.8275, 103.4025, 0, 18.8275, 103.31750000000001, 0, 18.9125, 103.31750000000001, 0, 18.9125, 103.4025, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 574
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '14'
+      (3006,0048) Contour Number                      IS: '64'
+      (3006,0050) Contour Data                        DS: Array of 42 elements
+      ---------
+      (3006,0000) Group Length                        UL: 370
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '65'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 296
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '66'
+      (3006,0050) Contour Data                        DS: [19.2525, 98.64250000000001, 0, 19.2525, 98.5575, 0, 19.337500000000002, 98.5575, 0, 19.337500000000002, 98.64250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '67'
+      (3006,0050) Contour Data                        DS: [19.2525, 100.76750000000001, 0, 19.2525, 100.6825, 0, 19.337500000000002, 100.6825, 0, 19.337500000000002, 100.76750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 348
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '68'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '69'
+      (3006,0050) Contour Data                        DS: [19.5075, 106.2925, 0, 19.5075, 106.20750000000001, 0, 19.5925, 106.20750000000001, 0, 19.5925, 106.2925, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 298
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '70'
+      (3006,0050) Contour Data                        DS: [19.677500000000002, 97.4525, 0, 19.677500000000002, 97.3675, 0, 19.762500000000003, 97.3675, 0, 19.762500000000003, 97.4525, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 972
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '24'
+      (3006,0048) Contour Number                      IS: '71'
+      (3006,0050) Contour Data                        DS: Array of 72 elements
+      ---------
+      (3006,0000) Group Length                        UL: 488
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '10'
+      (3006,0048) Contour Number                      IS: '72'
+      (3006,0050) Contour Data                        DS: Array of 30 elements
+      ---------
+      (3006,0000) Group Length                        UL: 556
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '12'
+      (3006,0048) Contour Number                      IS: '73'
+      (3006,0050) Contour Data                        DS: Array of 36 elements
+      ---------
+      (3006,0000) Group Length                        UL: 274
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '74'
+      (3006,0050) Contour Data                        DS: [23.4175, 94.1375, 0, 23.4175, 94.05250000000001, 0, 23.5025, 94.05250000000001, 0, 23.5025, 94.1375, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 322
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '75'
+      (3006,0050) Contour Data                        DS: [23.927500000000002, 109.26750000000001, 0, 23.927500000000002, 109.1825, 0, 24.012500000000003, 109.1825, 0, 24.012500000000003, 109.26750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 278
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '76'
+      (3006,0050) Contour Data                        DS: [24.0975, 109.7775, 0, 24.0975, 109.69250000000001, 0, 24.1825, 109.69250000000001, 0, 24.1825, 109.7775, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '77'
+      (3006,0050) Contour Data                        DS: [24.352500000000003, 109.9475, 0, 24.352500000000003, 109.86250000000001, 0, 24.4375, 109.86250000000001, 0, 24.4375, 109.9475, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 298
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '78'
+      (3006,0050) Contour Data                        DS: [24.4375, 109.52250000000001, 0, 24.4375, 109.43750000000001, 0, 24.5225, 109.43750000000001, 0, 24.5225, 109.52250000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 322
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '79'
+      (3006,0050) Contour Data                        DS: [25.372500000000002, 109.7775, 0, 25.372500000000002, 109.69250000000001, 0, 25.457500000000003, 109.69250000000001, 0, 25.457500000000003, 109.7775, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 300
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '80'
+      (3006,0050) Contour Data                        DS: [29.8775, 102.6375, 0, 29.8775, 102.55250000000001, 0, 29.962500000000002, 102.55250000000001, 0, 29.962500000000002, 102.6375, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 322
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '81'
+      (3006,0050) Contour Data                        DS: [29.962500000000002, 100.59750000000001, 0, 29.962500000000002, 100.5125, 0, 30.047500000000003, 100.5125, 0, 30.047500000000003, 100.59750000000001, 0]
+      ---------
+      (3006,0000) Group Length                        UL: 376
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '6'
+      (3006,0048) Contour Number                      IS: '82'
+      (3006,0050) Contour Data                        DS: Array of 18 elements
+      ---------
+      (3006,0000) Group Length                        UL: 318
+      (3006,0016)  Contour Image Sequence  1 item(s) ---- 
+         (0008,0000) Group Length                        UL: 100
+         (0008,1150) Referenced SOP Class UID            UI: Digital Mammography X-Ray Image Storage - For Presentation
+         (0008,1155) Referenced SOP Instance UID         UI: 1.2.276.0.7230010.3.1.4.3059715276.5112.1678755402.13002
+         ---------
+      (3006,0042) Contour Geometric Type              CS: 'CLOSED_PLANAR_XOR'
+      (3006,0046) Number of Contour Points            IS: '4'
+      (3006,0048) Contour Number                      IS: '83'
+      (3006,0050) Contour Data                        DS: [30.302500000000002, 99.83250000000001, 0, 30.302500000000002, 99.7475, 0, 30.387500000000003, 99.7475, 0, 30.387500000000003, 99.83250000000001, 0]
+      ---------
+   (3006,0084) Referenced ROI Number               IS: '1'
+   ---------
+   (3006,0000) Group Length                        UL: 36
+   (3006,002A) ROI Display Color                   IS: [82, 188, 163]
+   (3006,0040)  Contour Sequence  0 item(s) ---- 
+   (3006,0084) Referenced ROI Number               IS: '2'
+   ---------
+(3006,0080)  RT ROI Observations Sequence  2 item(s) ---- 
+   (3006,0000) Group Length                        UL: 36
+   (3006,0082) Observation Number                  IS: '1'
+   (3006,0084) Referenced ROI Number               IS: '1'
+   (3006,00A4) RT ROI Interpreted Type             CS: ''
+   (3006,00A6) ROI Interpreter                     PN: ''
+   ---------
+   (3006,0000) Group Length                        UL: 36
+   (3006,0082) Observation Number                  IS: '2'
+   (3006,0084) Referenced ROI Number               IS: '2'
+   (3006,00A4) RT ROI Interpreted Type             CS: ''
+   (3006,00A6) ROI Interpreter                     PN: ''
+   ---------
