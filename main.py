@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 
 # Input DICOM file (change if needed)
-DICOM_FILE = Path(r"/data/UC6/ECI_GUM_S0001/exp_ECI_GUM_S0001_20190122/scans/2-SINGLE_IMAGES__Mammografia_Diagnostyka__Diagnosis/resources/annotations/files/event_4d4ea55c-6da8-4d59-a3b3-8c3bcefbc092/segmentation.dcm")
+DICOM_FILE = Path(r"/data/UC6/ECI_GUM_S0055/exp_ECI_GUM_S0055_20160525/scans/2-SINGLE_IMAGES__Mammografia_Diagnostyka__Diagnosis/resources/annotations/files/event_4d4ea55c-6da8-4d59-a3b3-8c3bcefbc092/segmentation.dcm")
 
 def main():
     if not DICOM_FILE.exists():
