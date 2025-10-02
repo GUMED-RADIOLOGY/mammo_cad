@@ -1,16 +1,17 @@
+#!/usr/bin/env python3
 """
-RTSTRUCT -> per-image PNG masks + CSV manifest.
+RTSTRUCT → per-image PNG masks (lossless) + CSV manifest.
 
-- Recursively finds RT Structure Sets.
-- For each ROI, rasterizes its polygons onto referenced image.
-- Uses DICOM geometry when available. Otherwise mm-from-top-left fallback.
+- Recursively finds RT Structure Sets (segmentation.dcm or any RTSTRUCT .dcm).
+- For each ROI, rasterizes its polygons onto referenced image(s).
+- Uses DICOM geometry when available (IPP/IOP/PixelSpacing); otherwise mm-from-top-left fallback.
 - Composition: default is UNION (no XOR holes). Use --composite xor|union|auto.
 - Skips vendor "Bounding box" measurement ROIs by default (toggle with --keep-bboxes).
-- Saves binary masks as PNG (0 background, 255 ROI) and a JSON with metadata.
+- Saves binary masks as PNG (0 background, 255 ROI) and a JSON sidecar with metadata.
 - Writes a CSV manifest.
 
 Example:
-
+python seg_rebuild.py --in-root /data/UC6 --out-root /app/UC6_masks --manifest /app/UC6_masks/masks_manifest.csv
 """
 
 import os, glob, argparse, json, traceback
@@ -37,7 +38,7 @@ def sanitize(name: str) -> str:
 def get_spacing(ds):
     ps = getattr(ds, "PixelSpacing", None)
     if ps and len(ps) >= 2:
-        return float(ps[0]), float(ps[1])
+        return float(ps[0]), float(ps[1])  # row, col (mm)
     ips = getattr(ds, "ImagerPixelSpacing", None)
     if ips and len(ips) >= 2:
         return float(ips[0]), float(ips[1])
@@ -61,19 +62,23 @@ def mm_xyz_to_rc(xyz, rows, cols, spacing, iop, ipp):
         c = np.array(iop[3:6], float)
         p = np.array([x, y, z], float)
         o = np.array(ipp[0:3], float)
-        d = p - o
+        d = p - o  # mm in patient space
         rr = (d @ r) / max(rmm, 1e-9)
         cc = (d @ c) / max(cmm, 1e-9)
     else:
+        # Fallback: assume top-left origin, +y down, +x right
         rr = y / max(rmm, 1e-9)
         cc = x / max(cmm, 1e-9)
+    # clamp to image bounds (leave a tiny negative for edges, then int clamp later)
     rr = float(np.clip(rr, -0.5, rows - 0.5))
     cc = float(np.clip(cc, -0.5, cols - 0.5))
     return rr, cc
 
 def to_jsonable(x):
+    """Make pydicom / numpy / MultiValue things JSON serializable."""
     import numpy as _np
     from pydicom.valuerep import PersonName
+    # Avoid importing MultiValue (location differs by pydicom versions)
     if x is None:
         return None
     if isinstance(x, (str, int, float, bool)):
@@ -84,6 +89,7 @@ def to_jsonable(x):
         return x.item()
     if isinstance(x, (list, tuple, set)):
         return [to_jsonable(v) for v in x]
+    # pydicom MultiValue is list-like; fall back to string if unknown
     try:
         from collections.abc import Sequence
         if isinstance(x, Sequence) and not isinstance(x, (str, bytes, bytearray, dict)):
@@ -104,6 +110,7 @@ def binary_fill_holes(mask_bool):
         h, w = mask_bool.shape
         visited = np.zeros_like(mask_bool, dtype=bool)
         q = deque()
+        # seed with border zeros
         for r in range(h):
             for c in (0, w-1):
                 if not mask_bool[r, c] and not visited[r, c]:
@@ -114,21 +121,23 @@ def binary_fill_holes(mask_bool):
                 if not mask_bool[r, c] and not visited[r, c]:
                     visited[r, c] = True
                     q.append((r, c))
-
+        # 4-neighbor flood
         while q:
             r, c = q.popleft()
             for nr, nc in ((r-1,c), (r+1,c), (r,c-1), (r,c+1)):
                 if 0 <= nr < h and 0 <= nc < w and not mask_bool[nr, nc] and not visited[nr, nc]:
                     visited[nr, nc] = True
                     q.append((nr, nc))
+        # fill pixels that are zero but not connected to border
         return mask_bool | (~visited & ~mask_bool)
 
+# --------- index all DICOM images under root ---------
 
 def build_image_index(in_root: Path):
     print("[idx] scanning images…")
     pat = str(in_root / "*" / "**" / "resources" / "DICOM" / "files" / "*.dcm")
     paths = list(glob.iglob(pat, recursive=True))
-    idx = {}
+    idx = {}  # sop_uid -> dict(meta)
     for p in tqdm(paths, desc="Index images", unit="hdr"):
         try:
             ds = pydicom.dcmread(p, stop_before_pixels=True, force=True)
@@ -138,6 +147,7 @@ def build_image_index(in_root: Path):
             if sop and rows and cols:
                 idx[str(sop)] = {"path": Path(p)}
         except Exception:
+            # keep silent to avoid huge logs
             pass
     print(f"[idx] {len(idx)} image headers found")
     return idx
@@ -149,7 +159,7 @@ def should_skip_roi(name: str, desc: str, keep_bboxes: bool) -> bool:
     d = (desc or "").lower()
     if keep_bboxes:
         return False
-    # Skip shit
+    # Skip common “measurement” ROIs that are not pixel-accurate segmentations
     if "bounding box" in n or "bounding-box" in d or "2d bounding box" in d:
         return True
     return False
@@ -167,7 +177,7 @@ def process_rtstruct(seg_path: Path, in_root: Path, out_root: Path, img_idx, man
     rid = record_id_from_path(seg_path, in_root)
     print(f"[seg] {seg_path} (RID={rid})")
 
-    # ROI metadata
+    # Gather ROI metadata
     roi_meta = {}
     for item in getattr(ds, "StructureSetROISequence", []) or []:
         num = str(getattr(item, "ROINumber", ""))
@@ -177,7 +187,7 @@ def process_rtstruct(seg_path: Path, in_root: Path, out_root: Path, img_idx, man
             "color": None,
         }
 
-    # Iterate
+    # Iterate ROIContourSequence
     for rc in getattr(ds, "ROIContourSequence", []) or []:
         ref_num = str(getattr(rc, "ReferencedROINumber", ""))
         color = getattr(rc, "ROIDisplayColor", None)
@@ -196,6 +206,8 @@ def process_rtstruct(seg_path: Path, in_root: Path, out_root: Path, img_idx, man
         if not contours:
             continue
 
+        # Determine composite for this ROI if 'auto'
+        # Some vendors encode 'CLOSED_PLANAR_XOR' in (3006,0042); we treat that as XOR only if requested.
         roi_modes = set()
         for c in contours:
             gtype = str(getattr(c, "ContourGeometricType", "") or "").upper()
@@ -204,6 +216,7 @@ def process_rtstruct(seg_path: Path, in_root: Path, out_root: Path, img_idx, man
         if composite_mode == "auto":
             roi_composite = "xor" if any("XOR" in m for m in roi_modes) else "union"
 
+        # group by referenced SOP
         per_sop = {}
         for c in contours:
             cis = getattr(c, "ContourImageSequence", []) or []
@@ -233,11 +246,12 @@ def process_rtstruct(seg_path: Path, in_root: Path, out_root: Path, img_idx, man
 
             mask = np.zeros((rows, cols), dtype=np.bool_)
             for pts in polys:
-                # Map mm → pixels
+                # Map mm → pixels (round to nearest integer px and clamp)
                 rc_pix = [mm_xyz_to_rc(p, rows, cols, spacing, iop, ipp) for p in pts]
                 rc_int = [(int(round(r)), int(round(c))) for r, c in rc_pix]
                 rc_int = [(min(max(0, r), rows-1), min(max(0, c), cols-1)) for r, c in rc_int]
 
+                # PIL expects (x=col, y=row)
                 poly_xy = [(c, r) for r, c in rc_int]
                 tmp = Image.new("1", (cols, rows), 0)
                 ImageDraw.Draw(tmp).polygon(poly_xy, outline=1, fill=1)
@@ -245,6 +259,7 @@ def process_rtstruct(seg_path: Path, in_root: Path, out_root: Path, img_idx, man
 
                 if roi_composite == "xor":
                     mask ^= tmp_arr
+                else:  # union
                     mask |= tmp_arr
 
             if fill_holes:
@@ -300,6 +315,7 @@ def main():
     out_root = Path(args.out_root)
     out_root.mkdir(parents=True, exist_ok=True)
 
+    # Find RTSTRUCT files by name; include any .dcm RTSTRUCTs
     seg_paths = [Path(p) for p in glob.iglob(str(in_root / "**" / "segmentation.dcm"), recursive=True)]
     pat_all = str(in_root / "*" / "**" / "resources" / "DICOM" / "files" / "*.dcm")
     for p in glob.iglob(pat_all, recursive=True):
@@ -317,6 +333,7 @@ def main():
         print(f"[done] no RTSTRUCT files found under {in_root}")
         return
 
+    # Build image index
     img_idx = build_image_index(in_root)
 
     manifest_rows = []
