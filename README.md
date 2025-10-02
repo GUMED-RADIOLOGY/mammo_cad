@@ -3,8 +3,6 @@ pre opus paper
 
 # GPU Dev Container (PyTorch + DICOM) — README
 
-A dead-simple, **throw-away dev box** for an Ubuntu server:
-
 * Runs as **your user** (no root-owned files on mounts)
 * **CUDA / PyTorch** ready
 * **DICOM** stack (pydicom, pylibjpeg, GDCM, dcmtk)
@@ -13,7 +11,7 @@ A dead-simple, **throw-away dev box** for an Ubuntu server:
 
 ---
 
-## Prereqs (host)
+## Prereqs
 
 * **NVIDIA driver** new enough for CUDA 12.x (e.g. 570+ for 12.8)
 * **Docker** + **Docker Compose v2**
@@ -96,7 +94,7 @@ gh pr create --fill --web
 * `./.devhome` → `/home/dev` (ssh/gh/pip caches; keeps auth & settings)
 * Add datasets in `docker-compose.yml` under `volumes:` (e.g. `/data:/data`)
 
-## Cheatsheet (wrapper)
+## Cheatsheet
 
 ```bash
 ./dev              # shell
