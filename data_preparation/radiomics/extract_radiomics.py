@@ -10,7 +10,6 @@ python extract_radiomics.py \
 """
 import argparse, json, re, logging
 from pathlib import Path
-from collections import Counter
 
 import numpy as np
 import pandas as pd
